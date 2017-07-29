@@ -1,5 +1,4 @@
 # fablicop
-[![Gem Version](https://badge.fury.io/rb/onkcop.svg)](https://badge.fury.io/rb/onkcop)
 
 fablicop is a RuboCop configration gem.
 
@@ -8,14 +7,14 @@ fablicop is a RuboCop configration gem.
 Setup .rubocop.yml
 
 ```sh
-bundle exec onkcop init
+bundle exec onkcp init
 ```
 
 `init` generate the following directive to your `.rubocop.yml`:
 
 ```yaml
 inherit_gem:
-  onkcop:
+  fablicop:
     - "config/rubocop.yml"
     # uncomment if use rails cops
     # - "config/rails.yml"
@@ -38,13 +37,13 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :development do
-  gem "onkcop", require: false
+  gem "fablicop", require: false
 end
 ```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/onk/onkcop.
+Bug reports and pull requests are welcome on GitHub at https://github.com/onk/fablicop.
 
 
 ## License
