@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tomy"]
   spec.email         = ["kazushige_tominaga@fablic.co.jp"]
 
-  spec.summary       = "FabliCop is a RuboCop configration gem. "
-  spec.description   = "FabliCop is a RuboCop configration gem."
+  spec.summary       = "fablicop is a RuboCop configration gem. "
+  spec.description   = "fablicop is a RuboCop configration gem."
   spec.homepage      = "https://github.com/Fablic/fablicop"
   spec.license       = "MIT"
 
