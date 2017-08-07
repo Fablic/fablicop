@@ -1,3 +1,4 @@
+require "fablicop/cli"
 require "fablicop/version"
 
 module Fablicop
