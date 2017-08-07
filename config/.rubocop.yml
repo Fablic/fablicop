@@ -137,3 +137,8 @@ Metrics/BlockLength:
 # キーワード引数は引数の数に含めない
 ParameterLists:
   CountKeywordArgs: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
