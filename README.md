@@ -7,7 +7,7 @@ fablicop is a RuboCop configration gem.
 Setup .rubocop.yml
 
 ```sh
-bundle exec onkcp init
+bundle exec fablicop init
 ```
 
 `init` generate the following directive to your `.rubocop.yml`:
@@ -43,7 +43,7 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/onk/fablicop.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Fablic/fablicop.
 
 
 ## License

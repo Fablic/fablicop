@@ -6,7 +6,7 @@ require 'fablicop/version'
 Gem::Specification.new do |spec|
   spec.name          = "fablicop"
   spec.version       = Fablicop::VERSION
-  spec.authors       = ["Tomy"]
+  spec.authors       = ["tommy"]
   spec.email         = ["kazushige_tominaga@fablic.co.jp"]
 
   spec.summary       = "fablicop is a RuboCop configration gem. "
