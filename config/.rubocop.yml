@@ -21,7 +21,7 @@ Rails/HttpPositionalArguments:
 Style/AsciiComments:
   Enabled: false
 
-# 複数行の場合はケツカンマを入れる
+# 複数行の場合は末尾にカンマを入れる
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
 Style/TrailingCommaInArguments:
@@ -59,9 +59,45 @@ Style/MultilineBlockChain:
   Enabled: false
 Style/EmptyMethod:
   Enabled: false
+# 引数の書き方の多様性を許可
+# foo(a,
+#  b
+# )
+# foo(
+#  a,
+#  b)
+# foo(
+#  a,
+#  b
+# )
+# foo(a,
+#  b)
 Style/MultilineMethodCallBraceLayout:
   Enabled: false
+# メソッド指定の多様性を許可
+# while a
+# .b
+#   something
+# end
+# while a
+#      .b
+#   something
+# end
+# Thing.a
+#    .b
+#    .c
+# while a
+#   .b
+#   something
+# end
 Style/MultilineMethodCallIndentation:
+  Enabled: false
+
+# aaa(bbb(
+#   ccc
+# ))
+# 的なのができないのは不便すぎるのでdisable
+Style/FirstParameterIndentation:
   Enabled: false
 
 ##################### Layout ##################################
