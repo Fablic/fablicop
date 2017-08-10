@@ -1,3 +1,7 @@
+# inherit_gem中のexclude dirの指定が効かないらしい
+# https://github.com/bbatsov/rubocop/issues/4154
+# excludeしているものは一旦このファイルに直接記入
+
 inherit_gem:
   fablicop:
     - "config/.rubocop.yml"
@@ -7,6 +11,28 @@ inherit_gem:
     # - "config/rspec.yml"
 
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.3
   # uncomment if use rails cops
   # TargetRailsVersion: 5.1
+  Exclude:
+    - "vendor/**/*" # rubocop config/default.yml
+    - "db/schema.rb"
+    - "db/migrate/*"
+    - "db/fixtures/**/*"
+    - "test/factories/**/*"
+    - "spec/factories/**/*"
+
+##################### Metrics ##################################
+
+Metrics/LineLength:
+  Exclude:
+    - "db/migrate/*.rb"
+
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/*.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
