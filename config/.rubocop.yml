@@ -100,6 +100,10 @@ Style/MultilineMethodCallIndentation:
 Style/FirstParameterIndentation:
   Enabled: false
 
+# 候補が多いときはcondみたいに使いたい
+Style/EmptyCaseCondition:
+  Enabled: false
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
