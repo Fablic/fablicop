@@ -104,6 +104,9 @@ Style/FirstParameterIndentation:
 Style/EmptyCaseCondition:
   Enabled: false
 
+Style/DoubleNegation:
+  Enabled: false
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
