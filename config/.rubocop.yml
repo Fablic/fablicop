@@ -110,6 +110,9 @@ Style/DoubleNegation:
 Style/ParallelAssignment:
   Enabled: false
 
+Style/BracesAroundHashParameters:
+  Enabled: false
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
