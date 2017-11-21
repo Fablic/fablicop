@@ -107,6 +107,9 @@ Style/EmptyCaseCondition:
 Style/DoubleNegation:
   Enabled: false
 
+Style/ParallelAssignment:
+  Enabled: false
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
