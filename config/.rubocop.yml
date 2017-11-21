@@ -107,6 +107,18 @@ Style/EmptyCaseCondition:
 Style/DoubleNegation:
   Enabled: false
 
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/DefWithParentheses:
+  Enabled: false
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
