@@ -119,6 +119,18 @@ Style/MethodCallWithoutArgsParentheses:
 Style/DefWithParentheses:
   Enabled: false
 
+# 以下の両方を許容
+#   aaa.
+#     bb().
+#     cc()
+#   aaa
+#     .bb()
+#     .cc()
+# 前者は途中にコメントをはさむことができて実用上圧倒的に便利.
+# 後者はデフォルトでrubocopがおすすめしてるやつ
+Style/DotPosition:
+  Enabled: false
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
