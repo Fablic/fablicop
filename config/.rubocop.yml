@@ -128,7 +128,7 @@ Style/DefWithParentheses:
 #     .cc()
 # 前者は途中にコメントをはさむことができて実用上圧倒的に便利.
 # 後者はデフォルトでrubocopがおすすめしてるやつ
-Style/DotPosition:
+Layout/DotPosition:
   Enabled: false
 
 ##################### Layout ##################################
