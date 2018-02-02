@@ -72,7 +72,7 @@ Style/EmptyMethod:
 # )
 # foo(a,
 #  b)
-Style/MultilineMethodCallBraceLayout:
+Layout/MultilineMethodCallBraceLayout:
   Enabled: false
 # メソッド指定の多様性を許可
 # while a
@@ -90,14 +90,14 @@ Style/MultilineMethodCallBraceLayout:
 #   .b
 #   something
 # end
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   Enabled: false
 
 # aaa(bbb(
 #   ccc
 # ))
 # 的なのができないのは不便すぎるのでdisable
-Style/FirstParameterIndentation:
+Layout/FirstParameterIndentation:
   Enabled: false
 
 # 候補が多いときはcondみたいに使いたい
@@ -128,7 +128,7 @@ Style/DefWithParentheses:
 #     .cc()
 # 前者は途中にコメントをはさむことができて実用上圧倒的に便利.
 # 後者はデフォルトでrubocopがおすすめしてるやつ
-Style/DotPosition:
+Layout/DotPosition:
   Enabled: false
 
 ##################### Layout ##################################
