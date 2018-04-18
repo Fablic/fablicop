@@ -4,7 +4,7 @@
 
 inherit_gem:
   fablicop:
-    - "config/.rubocop.yml"
+    - "config/.base_rubocop.yml"
     # uncomment if use rails cops
     # - "config/rails.yml"
     # uncomment if use rspec cops
