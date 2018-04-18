@@ -12,27 +12,3 @@ inherit_gem:
 
 AllCops:
   TargetRubyVersion: 2.3
-  # uncomment if use rails cops
-  # TargetRailsVersion: 5.1
-  Exclude:
-    - "vendor/**/*" # rubocop config/default.yml
-    - "db/schema.rb"
-    - "db/migrate/*"
-    - "db/fixtures/**/*"
-    - "test/factories/**/*"
-    - "spec/factories/**/*"
-
-##################### Metrics ##################################
-
-Metrics/LineLength:
-  Exclude:
-    - "db/migrate/*.rb"
-
-Metrics/MethodLength:
-  Exclude:
-    - "db/migrate/*.rb"
-
-Metrics/BlockLength:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'

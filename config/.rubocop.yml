@@ -162,14 +162,12 @@ Metrics/MethodLength:
   Exclude:
     - "db/migrate/*.rb"
 
-Metrics/BlockLength:
-  Max: 100
-
 # キーワード引数は引数の数に含めない
 ParameterLists:
   CountKeywordArgs: false
 
 Metrics/BlockLength:
+  Max: 100
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
