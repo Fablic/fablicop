@@ -1,7 +1,3 @@
-# inherit_gem中のexclude dirの指定が効かないらしい
-# https://github.com/bbatsov/rubocop/issues/4154
-# excludeしているものは一旦このファイルに直接記入
-
 inherit_gem:
   fablicop:
     - "config/.base_rubocop.yml"
