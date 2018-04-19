@@ -22,7 +22,9 @@ Style/AsciiComments:
   Enabled: false
 
 # 複数行の場合は末尾にカンマを入れる
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
@@ -139,6 +141,10 @@ Layout/SpaceInLambdaLiteral:
   Enabled: false
 Layout/IndentHeredoc:
   Enabled: false
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
 
 ##################### Lint ##################################
 
@@ -162,14 +168,27 @@ Metrics/MethodLength:
   Exclude:
     - "db/migrate/*.rb"
 
-Metrics/BlockLength:
-  Max: 100
-
 # キーワード引数は引数の数に含めない
 ParameterLists:
   CountKeywordArgs: false
 
 Metrics/BlockLength:
+  Max: 100
   Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
+    - "spec/**/*.rb"
+    - "test/**/*.rb"
+    - "app/admin/*.rb"
+
+# Explicitly set the default value 15
+Metrics/AbcSize:
+  Max: 15
+  Exclude:
+    - "test/**/*.rb"
+
+# キーワード引数は引数の数に含めない
+ParameterLists:
+  CountKeywordArgs: false
+
+Metrics/ClassLength:
+  Exclude:
+    - "test/**/*.rb"

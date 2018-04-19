@@ -1,0 +1,2 @@
+inherit_gem:
+  fablicop: "config/base_rubocop.yml"
