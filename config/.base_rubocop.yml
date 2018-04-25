@@ -178,6 +178,7 @@ Metrics/BlockLength:
     - "spec/**/*.rb"
     - "test/**/*.rb"
     - "app/admin/*.rb"
+    - "config/**/*.rb"
 
 # Explicitly set the default value 15
 Metrics/AbcSize:
