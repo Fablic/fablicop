@@ -7,6 +7,8 @@ AllCops:
     - "db/fixtures/**/*"
     - "test/factories/**/*"
     - "spec/factories/**/*"
+    - "spec/test_app/db/*"
+
   DisplayCopNames: true
   TargetRubyVersion: 2.3
 Rails:
