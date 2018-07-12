@@ -135,6 +135,12 @@ Style/DefWithParentheses:
 Layout/DotPosition:
   Enabled: false
 
+# classが入れ子になった場合、テストの順番によってはエラーになりうる
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "test/**/*.rb"
+    - "spec/**/*.rb"
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
