@@ -15,16 +15,14 @@ bundle exec fablicop init
 ```yaml
 inherit_gem:
   fablicop:
-    - "config/rubocop.yml"
+    - "config/.base_rubocop.yml"
     # uncomment if use rails cops
     # - "config/rails.yml"
     # uncomment if use rspec cops
     # - "config/rspec.yml"
 
 AllCops:
-  TargetRubyVersion: 2.4
-  # uncomment if use rails cops
-  # TargetRailsVersion: 5.1
+  TargetRubyVersion: 2.3
 ```
 
 ```sh
