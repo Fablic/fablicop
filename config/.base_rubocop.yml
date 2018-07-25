@@ -201,3 +201,11 @@ ParameterLists:
 Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - local
+    - test
