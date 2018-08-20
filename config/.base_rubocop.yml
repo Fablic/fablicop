@@ -209,6 +209,3 @@ Rails/UnknownEnv:
     - development
     - local
     - test
-
-Gemspec/OrderedDependencies:
-  Enabled: false
