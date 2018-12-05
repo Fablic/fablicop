@@ -212,3 +212,6 @@ Rails/UnknownEnv:
 
 Gemspec/OrderedDependencies:
   Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
