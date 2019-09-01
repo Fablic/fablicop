@@ -6,7 +6,9 @@ AllCops:
     - "db/migrate/*"
     - "db/fixtures/**/*"
     - "test/factories/**/*"
+    - "test/fixtures/**/*"
     - "spec/factories/**/*"
+    - "spec/fixtures/**/*"
     - "spec/test_app/db/*"
 
   DisplayCopNames: true
