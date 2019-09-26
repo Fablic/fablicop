@@ -149,10 +149,6 @@ Layout/SpaceInLambdaLiteral:
   Enabled: false
 Layout/IndentHeredoc:
   Enabled: false
-Layout/MultilineMethodCallBraceLayout:
-  Enabled: false
-Layout/MultilineMethodCallIndentation:
-  Enabled: false
 
 ##################### Lint ##################################
 
@@ -193,10 +189,6 @@ Metrics/AbcSize:
   Max: 15
   Exclude:
     - "test/**/*.rb"
-
-# キーワード引数は引数の数に含めない
-ParameterLists:
-  CountKeywordArgs: false
 
 Metrics/ClassLength:
   Exclude:
