@@ -201,6 +201,7 @@ Rails/UnknownEnv:
     - development
     - local
     - test
+    - stg_qa01
 
 Gemspec/OrderedDependencies:
   Enabled: false
