@@ -147,7 +147,7 @@ Layout/SpaceBeforeFirstArg:
   Enabled: false
 Layout/SpaceInLambdaLiteral:
   Enabled: false
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false
 
 ##################### Lint ##################################
