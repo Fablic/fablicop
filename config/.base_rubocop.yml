@@ -114,9 +114,6 @@ Style/DoubleNegation:
 Style/ParallelAssignment:
   Enabled: false
 
-Style/BracesAroundHashParameters:
-  Enabled: false
-
 Style/MethodCallWithoutArgsParentheses:
   Enabled: false
 
