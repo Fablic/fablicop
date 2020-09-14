@@ -1,3 +1,6 @@
+require:
+  - rubocop-rails
+
 # 自動生成されるものやテストデータはチェック対象から除外する
 AllCops:
   Exclude:
