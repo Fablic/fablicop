@@ -13,7 +13,7 @@ AllCops:
     - "spec/test_app/db/*"
 
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5
 Rails:
   Enabled: true
 # rails >= 5 の設定のため
