@@ -4,7 +4,7 @@ AllCops:
     - "vendor/**/*" # rubocop config/default.yml
     - "db/schema.rb"
     - "db/migrate/*"
-    - "db/fixtures/**/*"
+    - "db/fixtures/*"
     - "test/factories/**/*"
     - "spec/factories/**/*"
     - "spec/test_app/db/*"
