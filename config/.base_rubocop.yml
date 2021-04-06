@@ -141,6 +141,11 @@ Style/ClassAndModuleChildren:
     - "test/**/*.rb"
     - "spec/**/*.rb"
 
+# 3桁ごとに_を入れるとSQLの表示方法と乖離するためfixtureは対象外
+Style/NumericLiterals:
+  Exclude:
+    - "db/fixtures/*.rb"
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
@@ -149,6 +154,13 @@ Layout/SpaceInLambdaLiteral:
   Enabled: false
 Layout/IndentHeredoc:
   Enabled: false
+
+Layout/ClosingParenthesisIndentation:
+  Exclude:
+    - "db/fixtures/*.rb"
+Layout/AlignParameters:
+  Exclude:
+    - "db/fixtures/*.rb"
 
 ##################### Lint ##################################
 
@@ -165,6 +177,7 @@ Metrics/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
+    - "db/fixtures/*.rb"
 
 # 20 行超えるのは migration ファイル以外滅多に無い
 Metrics/MethodLength:
