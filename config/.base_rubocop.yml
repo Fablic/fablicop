@@ -14,6 +14,7 @@ AllCops:
 
   DisplayCopNames: true
   TargetRubyVersion: 2.5
+  NewCops: enable # 新しい規約も随時取り入れる
 Rails:
   Enabled: true
 # rails >= 5 の設定のため
