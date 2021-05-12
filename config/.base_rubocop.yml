@@ -1,3 +1,6 @@
+require:
+  - rubocop-rails
+
 # 自動生成されるものやテストデータはチェック対象から除外する
 AllCops:
   Exclude:
@@ -10,7 +13,8 @@ AllCops:
     - "spec/test_app/db/*"
 
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5
+  NewCops: enable # 新しい規約も随時取り入れる
 Rails:
   Enabled: true
 # rails >= 5 の設定のため
@@ -114,9 +118,6 @@ Style/DoubleNegation:
 Style/ParallelAssignment:
   Enabled: false
 
-Style/BracesAroundHashParameters:
-  Enabled: false
-
 Style/MethodCallWithoutArgsParentheses:
   Enabled: false
 
@@ -147,7 +148,7 @@ Layout/SpaceBeforeFirstArg:
   Enabled: false
 Layout/SpaceInLambdaLiteral:
   Enabled: false
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false
 
 ##################### Lint ##################################
@@ -184,9 +185,7 @@ Metrics/BlockLength:
     - "app/admin/*.rb"
     - "config/**/*.rb"
 
-# Explicitly set the default value 15
 Metrics/AbcSize:
-  Max: 15
   Exclude:
     - "test/**/*.rb"
 
