@@ -174,7 +174,7 @@ Metrics/MethodLength:
     - "db/migrate/*.rb"
 
 # キーワード引数は引数の数に含めない
-ParameterLists:
+Metrics/ParameterLists:
   CountKeywordArgs: false
 
 Metrics/BlockLength:
