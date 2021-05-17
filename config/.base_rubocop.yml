@@ -1,3 +1,6 @@
+require:
+  - rubocop-rails
+
 # 自動生成されるものやテストデータはチェック対象から除外する
 AllCops:
   Exclude:
@@ -10,7 +13,8 @@ AllCops:
     - "spec/test_app/db/*"
 
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5
+  NewCops: enable # 新しい規約も随時取り入れる
 Rails:
   Enabled: true
 # rails >= 5 の設定のため
@@ -144,6 +148,22 @@ Layout/MultilineMethodCallIndentation:
 Layout/FirstParameterIndentation:
   Enabled: false
 
+# 候補が多いときはcondみたいに使いたい
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/DefWithParentheses:
+  Enabled: false
+
 # 以下の両方を許容
 #   aaa.
 #     bb().
@@ -164,6 +184,15 @@ Layout/AlignParameters:
   Exclude:
     - "db/fixtures/*.rb"
 
+##################### Layout ##################################
+# 引数前のスペースは複数許可
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+Layout/SpaceInLambdaLiteral:
+  Enabled: false
+Layout/HeredocIndentation:
+  Enabled: false
+
 ##################### Lint ##################################
 
 # 引数前のスペースを許容する
@@ -175,7 +204,7 @@ Lint/ParenthesesAsGroupedExpression:
 # * 警告 120文字
 # * 禁止 160文字
 # のイメージ
-Metrics/LineLength:
+Layout/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
@@ -188,7 +217,7 @@ Metrics/MethodLength:
     - "db/migrate/*.rb"
 
 # キーワード引数は引数の数に含めない
-ParameterLists:
+Metrics/ParameterLists:
   CountKeywordArgs: false
 
 Metrics/BlockLength:
@@ -199,9 +228,7 @@ Metrics/BlockLength:
     - "app/admin/*.rb"
     - "config/**/*.rb"
 
-# Explicitly set the default value 15
 Metrics/AbcSize:
-  Max: 15
   Exclude:
     - "test/**/*.rb"
 
