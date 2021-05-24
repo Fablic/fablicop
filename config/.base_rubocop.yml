@@ -15,10 +15,26 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.5
   NewCops: enable # 新しい規約も随時取り入れる
+
 Rails:
   Enabled: true
+
 # rails >= 5 の設定のため
 Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - local
+    - test
+
+Gemspec/OrderedDependencies:
   Enabled: false
 
 ##################### Style ##################################
@@ -67,6 +83,62 @@ Style/MultilineBlockChain:
   Enabled: false
 Style/EmptyMethod:
   Enabled: false
+
+# 候補が多いときはcondみたいに使いたい
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/DefWithParentheses:
+  Enabled: false
+
+# classが入れ子になった場合、テストの順番によってはエラーになりうる
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "test/**/*.rb"
+    - "spec/**/*.rb"
+
+# 3桁ごとに_を入れるとSQLの表示方法と乖離するためfixtureは対象外
+Style/NumericLiterals:
+  Exclude:
+    - "db/fixtures/*.rb"
+
+# 候補が多いときはcondみたいに使いたい
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/DefWithParentheses:
+  Enabled: false
+
+##################### Layout ##################################
+# 引数前のスペースは複数許可
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+Layout/SpaceInLambdaLiteral:
+  Enabled: false
+Layout/IndentHeredoc:
+  Enabled: false
+
 # 引数の書き方の多様性を許可
 # foo(a,
 #  b
@@ -108,22 +180,6 @@ Layout/MultilineMethodCallIndentation:
 Layout/FirstParameterIndentation:
   Enabled: false
 
-# 候補が多いときはcondみたいに使いたい
-Style/EmptyCaseCondition:
-  Enabled: false
-
-Style/DoubleNegation:
-  Enabled: false
-
-Style/ParallelAssignment:
-  Enabled: false
-
-Style/MethodCallWithoutArgsParentheses:
-  Enabled: false
-
-Style/DefWithParentheses:
-  Enabled: false
-
 # 以下の両方を許容
 #   aaa.
 #     bb().
@@ -136,13 +192,15 @@ Style/DefWithParentheses:
 Layout/DotPosition:
   Enabled: false
 
-# classが入れ子になった場合、テストの順番によってはエラーになりうる
-Style/ClassAndModuleChildren:
+# fixtureファイルの1行 -> DBの1レコードとして記述している
+# 複数行にまたがると直感的でなくなるため無効化
+Layout/ClosingParenthesisIndentation:
   Exclude:
-    - "test/**/*.rb"
-    - "spec/**/*.rb"
+    - "db/fixtures/*.rb"
+Layout/AlignParameters:
+  Exclude:
+    - "db/fixtures/*.rb"
 
-##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
   Enabled: false
@@ -151,14 +209,6 @@ Layout/SpaceInLambdaLiteral:
 Layout/HeredocIndentation:
   Enabled: false
 
-##################### Lint ##################################
-
-# 引数前のスペースを許容する
-Lint/ParenthesesAsGroupedExpression:
-    Enabled: false
-
-##################### Metrics ##################################
-
 # * 警告 120文字
 # * 禁止 160文字
 # のイメージ
@@ -166,6 +216,14 @@ Layout/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
+
+##################### Lint ##################################
+
+# 引数前のスペースを許容する
+Lint/ParenthesesAsGroupedExpression:
+    Enabled: false
+
+##################### Metrics ##################################
 
 # 20 行超えるのは migration ファイル以外滅多に無い
 Metrics/MethodLength:
@@ -193,16 +251,7 @@ Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
 
-Rails/UnknownEnv:
-  Environments:
-    - production
-    - staging
-    - development
-    - local
-    - test
-
-Gemspec/OrderedDependencies:
-  Enabled: false
-
-Rails/InverseOf:
-  Enabled: false
+# カラムが多い、もしくは文章が含まれるfixtureは一行が長くなってしまうため無効化
+Metrics/LineLength:
+  Exclude:
+    - "db/fixtures/*.rb"
