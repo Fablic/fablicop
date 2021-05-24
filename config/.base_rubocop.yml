@@ -192,10 +192,11 @@ Layout/FirstParameterIndentation:
 Layout/DotPosition:
   Enabled: false
 
+# fixtureファイルの1行 -> DBの1レコードとして記述している
+# 複数行にまたがると直感的でなくなるため無効化
 Layout/ClosingParenthesisIndentation:
   Exclude:
     - "db/fixtures/*.rb"
-
 Layout/AlignParameters:
   Exclude:
     - "db/fixtures/*.rb"
@@ -250,3 +251,8 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
+
+# カラムが多い、もしくは文章が含まれるfixtureは一行が長くなってしまうため無効化
+Metrics/LineLength:
+  Exclude:
+    - "db/fixtures/*.rb"
