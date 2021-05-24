@@ -15,10 +15,26 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.5
   NewCops: enable # 新しい規約も随時取り入れる
+
 Rails:
   Enabled: true
+
 # rails >= 5 の設定のため
 Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - local
+    - test
+
+Gemspec/OrderedDependencies:
   Enabled: false
 
 ##################### Style ##################################
@@ -98,6 +114,22 @@ Style/NumericLiterals:
   Exclude:
     - "db/fixtures/*.rb"
 
+# 候補が多いときはcondみたいに使いたい
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/DefWithParentheses:
+  Enabled: false
+
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
@@ -148,22 +180,6 @@ Layout/MultilineMethodCallIndentation:
 Layout/FirstParameterIndentation:
   Enabled: false
 
-# 候補が多いときはcondみたいに使いたい
-Style/EmptyCaseCondition:
-  Enabled: false
-
-Style/DoubleNegation:
-  Enabled: false
-
-Style/ParallelAssignment:
-  Enabled: false
-
-Style/MethodCallWithoutArgsParentheses:
-  Enabled: false
-
-Style/DefWithParentheses:
-  Enabled: false
-
 # 以下の両方を許容
 #   aaa.
 #     bb().
@@ -184,7 +200,6 @@ Layout/AlignParameters:
   Exclude:
     - "db/fixtures/*.rb"
 
-##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
   Enabled: false
@@ -192,14 +207,6 @@ Layout/SpaceInLambdaLiteral:
   Enabled: false
 Layout/HeredocIndentation:
   Enabled: false
-
-##################### Lint ##################################
-
-# 引数前のスペースを許容する
-Lint/ParenthesesAsGroupedExpression:
-    Enabled: false
-
-##################### Metrics ##################################
 
 # * 警告 120文字
 # * 禁止 160文字
@@ -209,6 +216,14 @@ Layout/LineLength:
   Exclude:
     - "db/migrate/*.rb"
     - "db/fixtures/*.rb"
+
+##################### Lint ##################################
+
+# 引数前のスペースを許容する
+Lint/ParenthesesAsGroupedExpression:
+    Enabled: false
+
+##################### Metrics ##################################
 
 # 20 行超えるのは migration ファイル以外滅多に無い
 Metrics/MethodLength:
@@ -235,17 +250,3 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
-
-Rails/UnknownEnv:
-  Environments:
-    - production
-    - staging
-    - development
-    - local
-    - test
-
-Gemspec/OrderedDependencies:
-  Enabled: false
-
-Rails/InverseOf:
-  Enabled: false
