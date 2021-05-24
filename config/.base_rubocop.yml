@@ -216,7 +216,6 @@ Layout/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
-    - "db/fixtures/*.rb"
 
 ##################### Lint ##################################
 
