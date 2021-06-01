@@ -93,9 +93,6 @@ Style/DoubleNegation:
 Style/ParallelAssignment:
   Enabled: false
 
-Style/BracesAroundHashParameters:
-  Enabled: false
-
 Style/MethodCallWithoutArgsParentheses:
   Enabled: false
 
@@ -135,7 +132,7 @@ Layout/SpaceBeforeFirstArg:
   Enabled: false
 Layout/SpaceInLambdaLiteral:
   Enabled: false
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false
 
 # 引数の書き方の多様性を許可
@@ -196,7 +193,7 @@ Layout/DotPosition:
 Layout/ClosingParenthesisIndentation:
   Exclude:
     - "db/fixtures/*.rb"
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Exclude:
     - "db/fixtures/*.rb"
 
