@@ -188,6 +188,7 @@ Layout/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
+    - "db/fixtures/*.rb" # カラムが多い、もしくは文章が含まれるfixtureは一行が長くなってしまうため無効化
 
 ##################### Lint ##################################
 
@@ -222,8 +223,3 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
-
-# カラムが多い、もしくは文章が含まれるfixtureは一行が長くなってしまうため無効化
-Metrics/LineLength:
-  Exclude:
-    - "db/fixtures/*.rb"
