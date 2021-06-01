@@ -20,9 +20,6 @@ inherit_gem:
     # - "config/rails.yml"
     # uncomment if use rspec cops
     # - "config/rspec.yml"
-
-AllCops:
-  TargetRubyVersion: 2.3
 ```
 
 ```sh
