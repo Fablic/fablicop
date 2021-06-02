@@ -93,9 +93,6 @@ Style/DoubleNegation:
 Style/ParallelAssignment:
   Enabled: false
 
-Style/BracesAroundHashParameters:
-  Enabled: false
-
 Style/MethodCallWithoutArgsParentheses:
   Enabled: false
 
@@ -113,29 +110,13 @@ Style/NumericLiterals:
   Exclude:
     - "db/fixtures/*.rb"
 
-# 候補が多いときはcondみたいに使いたい
-Style/EmptyCaseCondition:
-  Enabled: false
-
-Style/DoubleNegation:
-  Enabled: false
-
-Style/ParallelAssignment:
-  Enabled: false
-
-Style/MethodCallWithoutArgsParentheses:
-  Enabled: false
-
-Style/DefWithParentheses:
-  Enabled: false
-
 ##################### Layout ##################################
 # 引数前のスペースは複数許可
 Layout/SpaceBeforeFirstArg:
   Enabled: false
 Layout/SpaceInLambdaLiteral:
   Enabled: false
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false
 
 # 引数の書き方の多様性を許可
@@ -196,17 +177,9 @@ Layout/DotPosition:
 Layout/ClosingParenthesisIndentation:
   Exclude:
     - "db/fixtures/*.rb"
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Exclude:
     - "db/fixtures/*.rb"
-
-# 引数前のスペースは複数許可
-Layout/SpaceBeforeFirstArg:
-  Enabled: false
-Layout/SpaceInLambdaLiteral:
-  Enabled: false
-Layout/HeredocIndentation:
-  Enabled: false
 
 # * 警告 120文字
 # * 禁止 160文字
@@ -215,6 +188,7 @@ Layout/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
+    - "db/fixtures/*.rb" # カラムが多い、もしくは文章が含まれるfixtureは一行が長くなってしまうため無効化
 
 ##################### Lint ##################################
 
@@ -249,8 +223,3 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
-
-# カラムが多い、もしくは文章が含まれるfixtureは一行が長くなってしまうため無効化
-Metrics/LineLength:
-  Exclude:
-    - "db/fixtures/*.rb"
