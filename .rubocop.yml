@@ -1,2 +1,5 @@
 inherit_gem:
   fablicop: "config/base_rubocop.yml"
+
+require:
+  - lib/rubocop/cop/cops.rb
