@@ -229,3 +229,4 @@ Fablicop/CurrentUser:
   Enabled: true
   Exclude:
     - 'app/controllers/**/*.rb'
+    - 'app/admin/**/*.rb' # ActiveAdmin
