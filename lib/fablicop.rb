@@ -16,4 +16,3 @@ end
 Fablicop::Inject.defaults!
 
 require_relative 'rubocop/cop/cops'
-

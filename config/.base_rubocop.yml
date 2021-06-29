@@ -1,6 +1,5 @@
 require:
   - rubocop-rails
-  - ../lib/rubocop/cop/cops.rb
 
 # 自動生成されるものやテストデータはチェック対象から除外する
 AllCops:
@@ -224,9 +223,3 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
-
-Fablicop/CurrentUser:
-  Enabled: true
-  Exclude:
-    - 'app/controllers/**/*.rb'
-    - 'app/admin/**/*.rb' # ActiveAdmin

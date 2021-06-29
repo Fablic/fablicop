@@ -1,6 +1,7 @@
 # frozen_string_literal: true
+require 'spec_helper'
 
-RSpec.describe RuboCop::Cop::Fablicop::CurrentUser, :config do
+RSpec.describe RuboCop::Cop::Fablicop::UnexpectedIdentifiers, :config do
   let(:config) { RuboCop::Config.new }
 
   it 'registers an offense when using `@current_user`' do

@@ -3,11 +3,12 @@
 module RuboCop
   module Cop
     module Fablicop
-      class CurrentUser < Base
+      class UnexpectedIdentifiers < Base
         MSG = 'Check if @current_user exists.'
 
         def on_ivar(node)
-          return unless node.source == '@current_user'
+          identifiers = cop_config['Identifiers']
+          return unless identifiers && identifiers.is_a?(Array) && cop_config['Identifiers'].include?(node.source)
 
           add_offense(node)
         end
