@@ -39,6 +39,12 @@ inherit_gem:
 After configuration, your RuboCop now sees fablicop's configuration. Just run `rubocop` as usual.
 
 ```console
+rubocop
+```
+
+Or, prefix `bundle exec`.
+
+```console
 bundle exec rubocop
 ```
 
