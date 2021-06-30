@@ -223,3 +223,8 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Exclude:
     - "test/**/*.rb"
+
+# Does the variable name for an exception object really matter?
+# There are many things to think about before taking care of it.
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
