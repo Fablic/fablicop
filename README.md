@@ -1,39 +1,51 @@
 # fablicop
 
 fablicop is a RuboCop configration gem.
+It assumes your project is using Ruby on Rails, so some Cops prefixed with `Rails` are enabled out of the box.
+In other words, it's not appropriate to use it with non-Rails projects.
 
-## Usage
+## Installation
 
-Setup .rubocop.yml
+You can install fablicop with this command:
 
-```sh
-bundle exec fablicop init
+```console
+gem install fablicop
 ```
 
-`init` generate the following directive to your `.rubocop.yml`:
+Or, run `bundle install` after adding this line to your application's Gemfile:
+
+```ruby
+gem 'fablicop', require: false
+```
+
+## Getting started
+
+Set up `.rubocop.yml` with the command below.
+
+```console
+fablicop init
+```
+
+`init` generates the following directive to your `.rubocop.yml`:
 
 ```yaml
 inherit_gem:
   fablicop:
     - "config/.base_rubocop.yml"
-    # uncomment if use rails cops
-    # - "config/rails.yml"
-    # uncomment if use rspec cops
-    # - "config/rspec.yml"
 ```
 
-```sh
-bundle exec rubocop <options...>
+## Usage
+
+After configuration, your RuboCop now sees fablicop's configuration. Just run `rubocop` as usual.
+
+```console
+rubocop
 ```
 
-## Installation
+Or, prefix `bundle exec`.
 
-Add this line to your application's Gemfile:
-
-```ruby
-group :development do
-  gem "fablicop", require: false
-end
+```console
+bundle exec rubocop
 ```
 
 ## Contributing
