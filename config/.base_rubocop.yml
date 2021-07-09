@@ -1,5 +1,6 @@
 require:
   - rubocop-rails
+  - rubocop-rspec
 
 # We exclude files that are generated automatically or test data.
 AllCops:
