@@ -101,6 +101,10 @@ Style/NumericLiterals:
   Exclude:
     - "db/fixtures/*.rb"
 
+# This is the matter of preference.
+Style/IfUnlessModifier:
+  Enabled: false
+
 ##################### Layout ##################################
 # We sometimes want to put multiple spaces before arguments.
 Layout/SpaceBeforeFirstArg:
