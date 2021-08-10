@@ -3,6 +3,7 @@
 require 'fablicop'
 require 'rubocop/rspec/support'
 require 'byebug'
+require 'tmpdir'
 
 RSpec.configure do |config|
   config.include RuboCop::RSpec::ExpectOffense
