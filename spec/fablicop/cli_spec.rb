@@ -18,6 +18,7 @@ RSpec.describe Fablicop::CLI do
           fablicop:
             - "config/.base_rubocop.yml"
       YAML
+
       around do |example|
         Dir.mktmpdir do |dir|
           Dir.chdir(dir) do
