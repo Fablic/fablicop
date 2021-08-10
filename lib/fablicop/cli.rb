@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require 'fileutils'
+
 module Fablicop
   class CLI
     def self.start(args)

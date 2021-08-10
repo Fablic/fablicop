@@ -1,1 +1,4 @@
 inherit_from: config/.base_rubocop.yml
+
+Rails:
+  Enabled: false
