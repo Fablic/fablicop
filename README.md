@@ -1,7 +1,7 @@
 # fablicop
 
 fablicop is a RuboCop configration gem.
-It assumes your project is using Ruby on Rails, so some Cops prefixed with `Rails` are enabled out of the box.
+It assumes your project is using Ruby on Rails and RSpec, so some Cops prefixed with `Rails` and `RSpec` are enabled out of the box.
 In other words, it's not appropriate to use it with non-Rails projects.
 
 ## Installation
