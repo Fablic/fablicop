@@ -210,7 +210,10 @@ Metrics/BlockLength:
     - "app/admin/*.rb"
     - "config/**/*.rb"
 
+# We discussed internally about this parameter and decided to follow this configuration.
+# https://github.com/onk/onkcop/blob/8066859d3d00328146c1da9e57bdd4a951974ef2/config/rubocop.yml#L113-L116
 Metrics/AbcSize:
+  Max: 24
   Exclude:
     - "test/**/*.rb"
 
