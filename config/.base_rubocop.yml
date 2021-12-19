@@ -1,10 +1,11 @@
 require:
   - rubocop-rails
+  - rubocop-rspec
 
-# 自動生成されるものやテストデータはチェック対象から除外する
+# We exclude files that are generated automatically or test data.
 AllCops:
   Exclude:
-    - "vendor/**/*" # rubocop config/default.yml
+    - "vendor/**/*"
     - "db/schema.rb"
     - "db/migrate/*"
     - "db/fixtures/**/*"
@@ -13,12 +14,12 @@ AllCops:
     - "spec/test_app/db/*"
 
   DisplayCopNames: true
-  NewCops: enable # 新しい規約も随時取り入れる
+  NewCops: enable
 
 Rails:
   Enabled: true
 
-# rails >= 5 の設定のため
+# For rails >= 5. TODO: This should be enabled in my opinion.
 Rails/HttpPositionalArguments:
   Enabled: false
 
@@ -38,11 +39,11 @@ Gemspec/OrderedDependencies:
 
 ##################### Style ##################################
 
-# 日本語のコメントを許可する
+# We sometimes use non-ascii comments.
 Style/AsciiComments:
   Enabled: false
 
-# 複数行の場合は末尾にカンマを入れる
+# We prefer trailing comma all the time.
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
 Style/TrailingCommaInHashLiteral:
@@ -50,32 +51,22 @@ Style/TrailingCommaInHashLiteral:
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
-# class先頭のコメントを省略する
+# We sometimes omit the top-level documentation for classes/modules.
 Style/Documentation:
     Enabled: false
 
-# selfは省略しない
+# We sometimes want to use `self` anyway.
 Style/RedundantSelf:
     Enabled: false
 
-# 以下の2つのあわせ技で、こういうのを許可
+# We want to allow the code like this:
+#
 #   xs.select {
 #     f x
 #   }.map { |x|
 #     f x
 #     f x
 #   }.compact
-# Rubocopの意図としては、おそらく
-# * ブロックのあとにメソッドをチェインされると読みにくい(主観)
-# * ブロックの終わりを`}`ではなく`end`にすることで、defとかifとかと終了を揃える
-# だと思うけど、むしろ一旦変数に入れて改めてメソッド適用する方がかえって読みにくいと思うし(主観)、
-# 返り値を使う場合はブロックの終わりをendにせず}にしないとメソッド結合順序の関係などでやばいので
-# Style/BlockDelimitersとStyle/MultilineBlockChainはよくないと判断。
-#
-# 「返り値を目的とするブロック引数」には{}を、「副作用を目的とするブロック引数」にはdo/endを
-# 使うようにすると、可読性的にもメソッドの結合順序的にも実用上便利。
-# これが正しく運用されてるかどうかはgrammerではなくsemanticの話なので、レビュワーの人間が
-# 見ることになり、それは直感的な気がする (再び主観)
 Style/BlockDelimiters:
   Enabled: false
 Style/MultilineBlockChain:
@@ -83,7 +74,7 @@ Style/MultilineBlockChain:
 Style/EmptyMethod:
   Enabled: false
 
-# 候補が多いときはcondみたいに使いたい
+# We sometimes want to use empty case when there are many conditions.
 Style/EmptyCaseCondition:
   Enabled: false
 
@@ -99,19 +90,19 @@ Style/MethodCallWithoutArgsParentheses:
 Style/DefWithParentheses:
   Enabled: false
 
-# classが入れ子になった場合、テストの順番によってはエラーになりうる
+# This might not be a style cop because errors happen due to the order of tests with nested classes/modules.
 Style/ClassAndModuleChildren:
   Exclude:
     - "test/**/*.rb"
     - "spec/**/*.rb"
 
-# 3桁ごとに_を入れるとSQLの表示方法と乖離するためfixtureは対象外
+# This style differs from the expression of SQL.
 Style/NumericLiterals:
   Exclude:
     - "db/fixtures/*.rb"
 
 ##################### Layout ##################################
-# 引数前のスペースは複数許可
+# We sometimes want to put multiple spaces before arguments.
 Layout/SpaceBeforeFirstArg:
   Enabled: false
 Layout/SpaceInLambdaLiteral:
@@ -119,7 +110,8 @@ Layout/SpaceInLambdaLiteral:
 Layout/HeredocIndentation:
   Enabled: false
 
-# 引数の書き方の多様性を許可
+# We want to allow various expression for arguments.
+#
 # foo(a,
 #  b
 # )
@@ -134,7 +126,9 @@ Layout/HeredocIndentation:
 #  b)
 Layout/MultilineMethodCallBraceLayout:
   Enabled: false
-# メソッド指定の多様性を許可
+
+# We don't want to enforce various method calls.
+#
 # while a
 # .b
 #   something
@@ -153,27 +147,30 @@ Layout/MultilineMethodCallBraceLayout:
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 
+# Sometimes, we want to write like this:
+#
 # aaa(bbb(
 #   ccc
 # ))
-# 的なのができないのは不便すぎるのでdisable
 Layout/FirstParameterIndentation:
   Enabled: false
 
-# 以下の両方を許容
+# We want to allow both of them:
+#
 #   aaa.
 #     bb().
 #     cc()
 #   aaa
 #     .bb()
 #     .cc()
-# 前者は途中にコメントをはさむことができて実用上圧倒的に便利.
-# 後者はデフォルトでrubocopがおすすめしてるやつ
+#
+# The first one allows us to insert comments, and it would be convenient.
+# The second one is the default of this Cop.
 Layout/DotPosition:
   Enabled: false
 
-# fixtureファイルの1行 -> DBの1レコードとして記述している
-# 複数行にまたがると直感的でなくなるため無効化
+# We want to consistently write fixture files with the rule: 1 line for 1 record.
+# It's not intuitive with multiple lines.
 Layout/ClosingParenthesisIndentation:
   Exclude:
     - "db/fixtures/*.rb"
@@ -181,30 +178,27 @@ Layout/ParameterAlignment:
   Exclude:
     - "db/fixtures/*.rb"
 
-# * 警告 120文字
-# * 禁止 160文字
-# のイメージ
 Layout/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
-    - "db/fixtures/*.rb" # カラムが多い、もしくは文章が含まれるfixtureは一行が長くなってしまうため無効化
+    - "db/fixtures/*.rb" # Fixture files usually include long lines.
 
 ##################### Lint ##################################
 
-# 引数前のスペースを許容する
+# We sometimes want to put spaces before arguments.
 Lint/ParenthesesAsGroupedExpression:
     Enabled: false
 
 ##################### Metrics ##################################
 
-# 20 行超えるのは migration ファイル以外滅多に無い
+# There is something wrong with more than 20 lines aside from migration files.
 Metrics/MethodLength:
   Max: 20
   Exclude:
     - "db/migrate/*.rb"
 
-# キーワード引数は引数の数に含めない
+# We want to measure this metrics without keyword arguments.
 Metrics/ParameterLists:
   CountKeywordArgs: false
 
@@ -216,7 +210,10 @@ Metrics/BlockLength:
     - "app/admin/*.rb"
     - "config/**/*.rb"
 
+# We discussed internally about this parameter and decided to follow this configuration.
+# https://github.com/onk/onkcop/blob/8066859d3d00328146c1da9e57bdd4a951974ef2/config/rubocop.yml#L113-L116
 Metrics/AbcSize:
+  Max: 20
   Exclude:
     - "test/**/*.rb"
 
