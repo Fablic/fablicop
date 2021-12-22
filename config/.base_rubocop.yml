@@ -225,3 +225,7 @@ Metrics/ClassLength:
 # There are many things to think about before taking care of it.
 Naming/RescuedExceptionsVariableName:
   Enabled: false
+
+# disabling to not to show errors if there is no when/with/without in the context
+RSpec/ContextWording:
+  Enabled: false
