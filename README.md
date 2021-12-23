@@ -1,3 +1,5 @@
+![fablicop](https://img.shields.io/gem/v/fablicop?label=fablicop)
+
 # fablicop
 
 fablicop is a RuboCop configration gem.
