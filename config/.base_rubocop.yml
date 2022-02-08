@@ -229,3 +229,8 @@ Naming/RescuedExceptionsVariableName:
 # disabling to not to show errors if there is no when/with/without in the context
 RSpec/ContextWording:
   Enabled: false
+
+# We want using let! because so many cases have let!
+RSpec/LetSetup:
+  Enabled: false
+
