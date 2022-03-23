@@ -226,6 +226,16 @@ Metrics/ClassLength:
 Naming/RescuedExceptionsVariableName:
   Enabled: false
 
+##################### RSpec ##################################
+
 # disabling to not to show errors if there is no when/with/without in the context
 RSpec/ContextWording:
   Enabled: false
+
+# controller specs and request specs are hard to name reasonably
+RSpec/NamedSubject:
+  Enabled: false
+
+# because response validation in `request spec` is expected to result in large rows
+RSpec/ExampleLength:
+  Enabled: disable
