@@ -238,4 +238,4 @@ RSpec/NamedSubject:
 
 # because response validation in `request spec` is expected to result in large rows
 RSpec/ExampleLength:
-  Enabled: disable
+  Enabled: false
