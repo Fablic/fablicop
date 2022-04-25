@@ -101,6 +101,14 @@ Style/NumericLiterals:
   Exclude:
     - "db/fixtures/*.rb"
 
+# We don't care which we use: #yield_self or #then
+Style/ObjectThen:
+  Enabled: false
+
+# We don't care using ENV.fetch or ENV.[]
+Style/FetchEnvVar:
+  Enabled: false
+
 ##################### Layout ##################################
 # We sometimes want to put multiple spaces before arguments.
 Layout/SpaceBeforeFirstArg:
