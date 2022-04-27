@@ -247,3 +247,7 @@ RSpec/NamedSubject:
 # because response validation in `request spec` is expected to result in large rows
 RSpec/ExampleLength:
   Enabled: false
+
+# We don't care about whether using `described_class` or not.
+RSpec/DescribedClass:
+  Enabled: false
