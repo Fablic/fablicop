@@ -4,6 +4,8 @@
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.2.1...HEAD)
 
+- Disable RSpec/DescribedClass [\#75](https://github.com/Fablic/fablicop/pull/75) ([yykamei](https://github.com/yykamei))
+
 ## [v1.2.1](https://github.com/Fablic/fablicop/tree/v1.2.1) (2022-04-15)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.2.0...v1.2.1)
