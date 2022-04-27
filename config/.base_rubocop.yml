@@ -96,10 +96,9 @@ Style/ClassAndModuleChildren:
     - "test/**/*.rb"
     - "spec/**/*.rb"
 
-# This style differs from the expression of SQL.
+# Sometimes, 1000 is better than 1_000. Especially, it's useful to run grep(1) for searching `1000`.
 Style/NumericLiterals:
-  Exclude:
-    - "db/fixtures/*.rb"
+  Enabled: false
 
 # We don't care which we use: #yield_self or #then
 Style/ObjectThen:
@@ -107,6 +106,10 @@ Style/ObjectThen:
 
 # We don't care using ENV.fetch or ENV.[]
 Style/FetchEnvVar:
+  Enabled: false
+
+# We don't care which style we should use.
+Style/IfUnlessModifier:
   Enabled: false
 
 ##################### Layout ##################################
