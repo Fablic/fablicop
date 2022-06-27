@@ -100,6 +100,10 @@ Style/ClassAndModuleChildren:
 Style/NumericLiterals:
   Enabled: false
 
+# foo.zero? don't care nil case, we should avoid undefined method risk
+Style/NumericPredicate:
+  Enabled: false
+
 # We don't care which we use: #yield_self or #then
 Style/ObjectThen:
   Enabled: false
