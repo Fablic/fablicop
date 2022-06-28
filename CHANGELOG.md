@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.4.0...HEAD)
+
+**Closed issues:**
+
+- Disable Style/NumericPredicate [\#79](https://github.com/Fablic/fablicop/issues/79)
+
+**Merged pull requests:**
+
+- Disable Style/NumericPredicate [\#80](https://github.com/Fablic/fablicop/pull/80) ([sourcewc](https://github.com/sourcewc))
+
 ## [v1.4.0](https://github.com/Fablic/fablicop/tree/v1.4.0) (2022-04-27)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.3.0...v1.4.0)
