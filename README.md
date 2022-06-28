@@ -1,4 +1,4 @@
-![fablicop](https://img.shields.io/gem/v/fablicop?label=fablicop)
+<a href="https://rubygems.org/gems/fablicop"><img alt="fablicop" src="https://img.shields.io/gem/v/fablicop"></a>
 
 # fablicop
 
