@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.4.1...HEAD)
+
+**Merged pull requests:**
+
+- Disable Metrics aside from NestedBlocks [\#83](https://github.com/Fablic/fablicop/pull/83) ([DaisukeHirabayashi](https://github.com/DaisukeHirabayashi))
+
 ## [v1.4.1](https://github.com/Fablic/fablicop/tree/v1.4.1) (2022-06-28)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.4.0...v1.4.1)
