@@ -51,9 +51,9 @@ Style/TrailingCommaInHashLiteral:
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
-# We sometimes omit the top-level documentation for classes/modules.
+# We learned documentation is important.
 Style/Documentation:
-    Enabled: false
+    Enabled: true
 
 # We sometimes want to use `self` anyway.
 Style/RedundantSelf:
