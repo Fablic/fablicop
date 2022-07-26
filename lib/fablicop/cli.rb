@@ -3,6 +3,7 @@
 require 'fileutils'
 
 module Fablicop
+  # CLI handles command-line inputs.
   class CLI
     def self.start(args)
       action_name = retrieve_command_name(args)
