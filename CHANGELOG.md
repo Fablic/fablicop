@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.5.0...HEAD)
+
+**Merged pull requests:**
+
+- Enable `Style/Documentation` [\#86](https://github.com/Fablic/fablicop/pull/86) ([yykamei](https://github.com/yykamei))
+
 ## [v1.5.0](https://github.com/Fablic/fablicop/tree/v1.5.0) (2022-07-21)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.4.1...v1.5.0)
