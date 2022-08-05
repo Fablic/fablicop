@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.6.0...HEAD)
+
+**Merged pull requests:**
+
+- Disable Naming/VariableNumber [\#89](https://github.com/Fablic/fablicop/pull/89) ([yykamei](https://github.com/yykamei))
+
 ## [v1.6.0](https://github.com/Fablic/fablicop/tree/v1.6.0) (2022-07-26)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.5.0...v1.6.0)
