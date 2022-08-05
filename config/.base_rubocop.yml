@@ -236,6 +236,9 @@ Metrics/PerceivedComplexity:
 Naming/RescuedExceptionsVariableName:
   Enabled: false
 
+Naming/VariableNumber:
+  Enabled: false
+
 ##################### RSpec ##################################
 
 # disabling to not to show errors if there is no when/with/without in the context
