@@ -116,6 +116,10 @@ Style/FetchEnvVar:
 Style/IfUnlessModifier:
   Enabled: false
 
+# We don't care about the style of Arrays.
+Style/WordArray:
+  Enabled: false
+
 ##################### Layout ##################################
 # We sometimes want to put multiple spaces before arguments.
 Layout/SpaceBeforeFirstArg:
