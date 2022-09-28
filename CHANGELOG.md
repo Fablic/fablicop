@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Disable `Style/SymbolArray` [\#94](https://github.com/Fablic/fablicop/pull/94) ([yykamei](https://github.com/yykamei))
 - Disable Style/WordArray [\#92](https://github.com/Fablic/fablicop/pull/92) ([yykamei](https://github.com/yykamei))
 
 ## [v1.7.0](https://github.com/Fablic/fablicop/tree/v1.7.0) (2022-08-05)
