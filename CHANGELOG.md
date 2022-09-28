@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.7.0...HEAD)
+
+**Merged pull requests:**
+
+- Disable Style/WordArray [\#92](https://github.com/Fablic/fablicop/pull/92) ([yykamei](https://github.com/yykamei))
+
 ## [v1.7.0](https://github.com/Fablic/fablicop/tree/v1.7.0) (2022-08-05)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.6.0...v1.7.0)
