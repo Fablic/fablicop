@@ -120,6 +120,10 @@ Style/IfUnlessModifier:
 Style/WordArray:
   Enabled: false
 
+# We don't care about the style of Arrays.
+Style/SymbolArray:
+  Enabled: false
+
 ##################### Layout ##################################
 # We sometimes want to put multiple spaces before arguments.
 Layout/SpaceBeforeFirstArg:
