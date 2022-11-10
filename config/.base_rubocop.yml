@@ -41,6 +41,7 @@ Gemspec/OrderedDependencies:
 
 # We like to keep the hash key and value left.
 HashAlignment:
+  EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
 
 # We sometimes use non-ascii comments.
