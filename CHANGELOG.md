@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.8.0...HEAD)
+
+**Merged pull requests:**
+
+- Disable `Rails/HttpStatus` [\#98](https://github.com/Fablic/fablicop/pull/98) ([hanafuji87](https://github.com/hanafuji87))
+
 ## [v1.8.0](https://github.com/Fablic/fablicop/tree/v1.8.0) (2022-09-28)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.7.0...v1.8.0)
