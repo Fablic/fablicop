@@ -23,6 +23,9 @@ Rails:
 Rails/HttpPositionalArguments:
   Enabled: false
 
+Rails/HttpStatus:
+  Enabled: false
+
 Rails/InverseOf:
   Enabled: false
 
