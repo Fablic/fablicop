@@ -70,8 +70,13 @@ Style/RedundantSelf:
 #     f x
 #     f x
 #   }.compact
+# do .. end から更にメソッドチェーンすると見づらいので
+# auto-correct せず、自分で修正する
+# spec 内は見た目が綺麗になるので許可
 Style/BlockDelimiters:
-  Enabled: false
+  AutoCorrect: false
+  Exclude:
+    - "spec/**/*"
 Style/MultilineBlockChain:
   Enabled: false
 Style/EmptyMethod:
