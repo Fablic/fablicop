@@ -1,4 +1,14 @@
-inherit_from: config/.base_rubocop.yml
+inherit_gem:
+  fablicop:
+    - 'config/.base_rubocop.yml'
 
-Rails:
-  Enabled: false
+require:
+  - './lib/rubocop/cop/cops.rb'
+
+Fablicop/UnexpectedIdentifiers:
+  Enabled: true
+  Identifiers:
+    - '@current_user'
+  Exclude:
+    - 'app/controllers/**/*.rb'
+    - 'app/admin/**/*.rb' # ActiveAdmin

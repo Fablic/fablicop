@@ -1,9 +1,19 @@
 # frozen_string_literal: true
 
-require 'fablicop/cli'
-require 'fablicop/version'
+require 'rubocop'
+require_relative "fablicop/cli"
+require_relative 'fablicop/inject'
 
 # Rakuma's RuboCop configuration set.
 module Fablicop
-  # Your code goes here...
+  class Error < StandardError; end
+  PROJECT_ROOT   = Pathname.new(__dir__).parent.expand_path.freeze
+  CONFIG_DEFAULT = PROJECT_ROOT.join('.rubocop.yml').freeze
+  CONFIG         = YAML.safe_load(CONFIG_DEFAULT.read).freeze
+
+  private_constant(:CONFIG_DEFAULT, :PROJECT_ROOT)
 end
+
+Fablicop::Inject.defaults!
+
+require_relative 'rubocop/cop/cops'
