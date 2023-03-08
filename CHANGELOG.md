@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.9.0...HEAD)
+
+**Merged pull requests:**
+
+- Enabled Style::BlockDelimiters [\#102](https://github.com/Fablic/fablicop/pull/102) ([amyroi](https://github.com/amyroi))
+
 ## [v1.9.0](https://github.com/Fablic/fablicop/tree/v1.9.0) (2023-01-23)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.8.0...v1.9.0)
