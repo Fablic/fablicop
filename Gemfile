@@ -6,6 +6,6 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'bundler'
-gem 'rspec'
-gem 'rake'
 gem 'byebug'
+gem 'rake'
+gem 'rspec'
