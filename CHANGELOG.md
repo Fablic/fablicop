@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+## [v1.10.0](https://github.com/Fablic/fablicop/tree/v1.10.0) (2023-03-20)
 
-[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.9.0...HEAD)
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.9.0...v1.10.0)
 
 **Merged pull requests:**
 
