@@ -1,4 +1,6 @@
 inherit_from: config/.base_rubocop.yml
 
+AllCops:
+  TargetRubyVersion: 2.5
 Rails:
   Enabled: false
