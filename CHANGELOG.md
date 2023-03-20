@@ -7,6 +7,7 @@
 **Merged pull requests:**
 
 - Enabled Style::BlockDelimiters [\#102](https://github.com/Fablic/fablicop/pull/102) ([amyroi](https://github.com/amyroi))
+- Update rubocop requirement from \>= 1.14, \< 1.29 to \>= 1.14, \< 1.30 [\#78](https://github.com/Fablic/fablicop/pull/78) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v1.9.0](https://github.com/Fablic/fablicop/tree/v1.9.0) (2023-01-23)
 
