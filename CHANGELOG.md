@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Fablic/fablicop/tree/HEAD)
+
+[Full Changelog](https://github.com/Fablic/fablicop/compare/v1.10.0...HEAD)
+
+**Merged pull requests:**
+
+- Update rubocop requirement from \>= 1.14, \< 1.49 to \>= 1.14, \< 1.50 [\#108](https://github.com/Fablic/fablicop/pull/108) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v1.10.0](https://github.com/Fablic/fablicop/tree/v1.10.0) (2023-03-20)
 
 [Full Changelog](https://github.com/Fablic/fablicop/compare/v1.9.0...v1.10.0)
