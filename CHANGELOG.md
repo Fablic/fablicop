@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Disable `RSpec/Rails/HttpStatus` [\#117](https://github.com/Fablic/fablicop/pull/117) ([hanafuji87](https://github.com/hanafuji87))
 - Update rubocop requirement from \>= 1.14, \< 1.52 to \>= 1.14, \< 1.53 [\#115](https://github.com/Fablic/fablicop/pull/115) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Update rubocop requirement from \>= 1.14, \< 1.51 to \>= 1.14, \< 1.52 [\#113](https://github.com/Fablic/fablicop/pull/113) ([dependabot[bot]](https://github.com/apps/dependabot))
 
