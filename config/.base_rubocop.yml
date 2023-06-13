@@ -272,3 +272,6 @@ RSpec/ExampleLength:
 # We don't care about whether using `described_class` or not.
 RSpec/DescribedClass:
   Enabled: false
+
+RSpec/Rails/HttpStatus:
+  Enabled: false
