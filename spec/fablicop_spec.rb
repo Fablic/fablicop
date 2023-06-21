@@ -2,6 +2,6 @@
 
 RSpec.describe Fablicop do
   it 'has a version number' do
-    expect(Fablicop::VERSION).not_to be nil
+    expect(Fablicop::VERSION).not_to be_nil
   end
 end

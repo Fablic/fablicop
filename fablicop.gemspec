@@ -30,14 +30,11 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+  spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.required_ruby_version = '>= 2.5.0'
 
-  spec.add_dependency 'rubocop', '~> 1.14.0'
+  spec.add_dependency 'rubocop', '>= 1.14', '< 1.53'
   spec.add_dependency 'rubocop-rspec', '>= 1.15.1'
   spec.add_dependency 'rubocop-rails'
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'byebug'
 end

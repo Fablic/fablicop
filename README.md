@@ -1,4 +1,4 @@
-![fablicop](https://img.shields.io/gem/v/fablicop?label=fablicop)
+<a href="https://rubygems.org/gems/fablicop"><img alt="fablicop" src="https://img.shields.io/gem/v/fablicop"></a>
 
 # fablicop
 
@@ -53,6 +53,17 @@ bundle exec rubocop
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/Fablic/fablicop.
+
+## Release
+
+This Gem is configured to publish a new version via `.github/workflows/release.yml`. Follow these steps to publish a release:
+
+1. Go to https://github.com/Fablic/fablicop/actions/workflows/release.yml
+2. Click "Run workflow"
+3. Input the new version **without "v"** (e.g., `1.10.3`)
+4. Check "apply" (without "apply," this workflow performs without side-effects)
+5. Click the "Run workflow" button
+6. Make sure the new release is published on rubygegms.org
 
 
 ## License

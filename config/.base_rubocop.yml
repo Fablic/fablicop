@@ -23,6 +23,9 @@ Rails:
 Rails/HttpPositionalArguments:
   Enabled: false
 
+Rails/HttpStatus:
+  Enabled: false
+
 Rails/InverseOf:
   Enabled: false
 
@@ -51,9 +54,9 @@ Style/TrailingCommaInHashLiteral:
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
-# We sometimes omit the top-level documentation for classes/modules.
+# We learned documentation is important.
 Style/Documentation:
-    Enabled: false
+    Enabled: true
 
 # We sometimes want to use `self` anyway.
 Style/RedundantSelf:
@@ -67,8 +70,13 @@ Style/RedundantSelf:
 #     f x
 #     f x
 #   }.compact
+# do ... . end, and further method chaining from the end would be confusing to look at
+# Don't use method chaining in auto-correct, and modify it yourself.
+# Allow it in specs because it looks nice.
 Style/BlockDelimiters:
-  Enabled: false
+  AutoCorrect: false
+  Exclude:
+    - "spec/**/*"
 Style/MultilineBlockChain:
   Enabled: false
 Style/EmptyMethod:
@@ -96,10 +104,33 @@ Style/ClassAndModuleChildren:
     - "test/**/*.rb"
     - "spec/**/*.rb"
 
-# This style differs from the expression of SQL.
+# Sometimes, 1000 is better than 1_000. Especially, it's useful to run grep(1) for searching `1000`.
 Style/NumericLiterals:
-  Exclude:
-    - "db/fixtures/*.rb"
+  Enabled: false
+
+# foo.zero? don't care nil case, we should avoid undefined method risk
+Style/NumericPredicate:
+  Enabled: false
+
+# We don't care which we use: #yield_self or #then
+Style/ObjectThen:
+  Enabled: false
+
+# We don't care using ENV.fetch or ENV.[]
+Style/FetchEnvVar:
+  Enabled: false
+
+# We don't care which style we should use.
+Style/IfUnlessModifier:
+  Enabled: false
+
+# We don't care about the style of Arrays.
+Style/WordArray:
+  Enabled: false
+
+# We don't care about the style of Arrays.
+Style/SymbolArray:
+  Enabled: false
 
 ##################### Layout ##################################
 # We sometimes want to put multiple spaces before arguments.
@@ -192,44 +223,59 @@ Lint/ParenthesesAsGroupedExpression:
 
 ##################### Metrics ##################################
 
-# There is something wrong with more than 20 lines aside from migration files.
-Metrics/MethodLength:
-  Max: 20
-  Exclude:
-    - "db/migrate/*.rb"
+Metrics/AbcSize:
+  Enabled: false
 
-# We want to measure this metrics without keyword arguments.
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
 Metrics/ParameterLists:
   CountKeywordArgs: false
 
-Metrics/BlockLength:
-  Max: 100
-  Exclude:
-    - "spec/**/*.rb"
-    - "test/**/*.rb"
-    - "app/admin/*.rb"
-    - "config/**/*.rb"
-
-# We discussed internally about this parameter and decided to follow this configuration.
-# https://github.com/onk/onkcop/blob/8066859d3d00328146c1da9e57bdd4a951974ef2/config/rubocop.yml#L113-L116
-Metrics/AbcSize:
-  Max: 20
-  Exclude:
-    - "test/**/*.rb"
-
-Metrics/ClassLength:
-  Exclude:
-    - "test/**/*.rb"
+Metrics/PerceivedComplexity:
+  Enabled: false
 
 # Does the variable name for an exception object really matter?
 # There are many things to think about before taking care of it.
 Naming/RescuedExceptionsVariableName:
   Enabled: false
 
+Naming/VariableNumber:
+  Enabled: false
+
+##################### RSpec ##################################
+
 # disabling to not to show errors if there is no when/with/without in the context
 RSpec/ContextWording:
   Enabled: false
 
-# do not want to show errors when variable has number in it. (i.e: item_1)
+# controller specs and request specs are hard to name reasonably
+RSpec/NamedSubject:
+  Enabled: false
+
+# because response validation in `request spec` is expected to result in large rows
+RSpec/ExampleLength:
+  Enabled: false
+
+# We don't care about whether using `described_class` or not.
+RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/Rails/HttpStatus:
+  Enabled: false
+
+# ignore number in variables (i.e: item_1)
 RSpec/IndexedLet:
   Enabled: false
