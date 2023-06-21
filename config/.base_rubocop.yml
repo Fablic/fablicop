@@ -229,3 +229,7 @@ Naming/RescuedExceptionsVariableName:
 # disabling to not to show errors if there is no when/with/without in the context
 RSpec/ContextWording:
   Enabled: false
+
+# do not want to show errors when variable has number in it. (i.e: item_1)
+RSpec/IndexedLet:
+  Enabled: false
