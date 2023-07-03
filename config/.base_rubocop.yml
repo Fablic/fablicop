@@ -100,7 +100,7 @@ Style/DefWithParentheses:
 
 # This might not be a style cop because errors happen due to the order of tests with nested classes/modules.
 Style/ClassAndModuleChildren:
-Enabled: false
+  Enabled: false
 
 # Sometimes, 1000 is better than 1_000. Especially, it's useful to run grep(1) for searching `1000`.
 Style/NumericLiterals:
