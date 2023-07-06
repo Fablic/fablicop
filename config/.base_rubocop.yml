@@ -98,7 +98,9 @@ Style/MethodCallWithoutArgsParentheses:
 Style/DefWithParentheses:
   Enabled: false
 
-# This might not be a style cop because errors happen due to the order of tests with nested classes/modules.
+# fablicop assumes the application is built with Ruby on Rails, which regards the directories as namespaces.
+# Thus, we don't care our constants are defined in compact/nested style.
+# @see https://guides.rubyonrails.org/autoloading_and_reloading_constants.html#project-structure
 Style/ClassAndModuleChildren:
   Enabled: false
 
