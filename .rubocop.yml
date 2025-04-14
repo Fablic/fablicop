@@ -1,5 +1,11 @@
 inherit_from: config/.base_rubocop.yml
 
+require:
+  - ./lib/fablicop/to_datetime_cop.rb
+
+Fablicop/ToDatetimeCop:
+  Enabled: true
+
 AllCops:
   TargetRubyVersion: 2.5
 Rails:
